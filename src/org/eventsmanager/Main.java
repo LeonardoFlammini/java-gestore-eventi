@@ -14,28 +14,33 @@ public class Main {
             Event event = new Event("Concert", LocalDate.of(2024, 12, 25), 100);
 
             int num_of_seats = 0;
+            String choice = "";
 
-            System.out.println("1 - book\n2 - cancel\n3 - seats info");
-            String choice = scanner.nextLine();
-            switch (choice){
-                case "1":
-                    System.out.println("How many seats to book?");
-                    num_of_seats = Integer.parseInt(scanner.nextLine());
-                    event.book(num_of_seats);
-                    break;
-                case"2":
-                    System.out.println("How many seats to cancel?");
-                    num_of_seats = Integer.parseInt(scanner.nextLine());
-                    event.cancelBooking(num_of_seats);
-                    break;
-                case "3":
-                    event.printSeats();
-                    break;
-                default:
-                    break;
+            while (!choice.equals("4")) {
+                System.out.println("1 - book\n2 - cancel\n3 - seats info\n4 - quit");
+                choice = scanner.nextLine();
+                switch (choice){
+                    case "1":
+                        System.out.println("How many seats to book?");
+                        num_of_seats = Integer.parseInt(scanner.nextLine());
+                        event.book(num_of_seats);
+                        System.out.println(event.printSeats());
+                        break;
+                    case"2":
+                        System.out.println("How many seats to cancel?");
+                        num_of_seats = Integer.parseInt(scanner.nextLine());
+                        event.cancelBooking(num_of_seats);
+                        System.out.println(event.printSeats());
+                        break;
+                    case "3":
+                        System.out.println(event.printSeats());
+                        break;
+                    case "4":
+                        System.out.println("Quitting");
+                    default:
+                        break;
+                }
             }
-
-
 
 
         } catch (InvalidDateException e) {
@@ -45,6 +50,11 @@ public class Main {
         } catch (Exception e) {
             System.out.println("An unexpected error occurred: " + e.getMessage());
         }
+        finally {
+            scanner.close();
+        }
+
+
 
 
     }

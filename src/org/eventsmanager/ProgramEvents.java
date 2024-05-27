@@ -39,7 +39,7 @@ public class ProgramEvents {
     }
 
     public void sortEventsByDate() {
-        Collections.sort(eventsArray, new EventDateComparator());
+        eventsArray.sort(new EventDateComparator());
     }
 
     public String getSortedEventsString() {

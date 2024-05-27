@@ -51,6 +51,15 @@ public class Event {
         this.reserved_seats += num_of_seats;
     }
 
+    public void cancelBooking(int num_of_seats) throws IllegalArgumentException{
+        validateSeats(num_of_seats);
+        validateDate(this.date);
+        if(this.reserved_seats - num_of_seats < 0){
+            throw new IllegalArgumentException("Invalid number of seats to cancel. Number of reserved seats: " + this.reserved_seats);
+        }
+        this.reserved_seats -= num_of_seats;
+    }
+
 
     //Validations
     private int validateSeats(int seats) throws NumberFormatException{
@@ -65,5 +74,15 @@ public class Event {
             throw new InvalidDateException("Invalid date: " + date);
         }
         return date;
+    }
+
+    @Override
+    public String toString() {
+        return "Event{" +
+                "title='" + title + '\'' +
+                ", date=" + date +
+                ", available_seats=" + available_seats +
+                ", reserved_seats=" + reserved_seats +
+                '}';
     }
 }

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0661d1cd-52a0-4753-af6a-5b951c3ff8c0" name="Changes" comment="scaffolding">
-      <change afterPath="$PROJECT_DIR$/src/org/eventsmanager/exceptions/InvalidDateException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="0661d1cd-52a0-4753-af6a-5b951c3ff8c0" name="Changes" comment="add book method">
       <change beforePath="$PROJECT_DIR$/src/org/eventsmanager/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/eventsmanager/Event.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,11 +68,20 @@
       <option name="project" value="LOCAL" />
       <updated>1716795134112</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add book method">
+      <option name="closed" value="true" />
+      <created>1716797338061</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716797338061</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="scaffolding" />
-    <option name="LAST_COMMIT_MESSAGE" value="scaffolding" />
+    <MESSAGE value="add book method" />
+    <option name="LAST_COMMIT_MESSAGE" value="add book method" />
   </component>
 </project>
